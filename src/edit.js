@@ -31,11 +31,26 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Embed Posts For Gutenberg – hello from the editor!',
-				'embed-posts-for-gutenberg'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<figure className="epfg_post__featured-img">
+				<img src="https://placehold.co/600x600" alt="" />
+			</figure>
+
+			<div className="epfg_post--contents">
+				<h2 className="epfg_post__title">{ __('Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts', 'embed-posts-for-gutenberg') }</h2>
+
+				<ul className="epfg_post__meta">
+					<li><strong>{ __('Date:', 'embed-posts-for-gutenberg') }</strong> { __('10 May, 2024', 'embed-posts-for-gutenberg') }</li>
+					<li><strong>{ __('Author:', 'embed-posts-for-gutenberg') }</strong> { __('admin', 'embed-posts-for-gutenberg') }</li>
+					<li><strong>{ __('Category:', 'embed-posts-for-gutenberg') }</strong> { __('Uncategorized', 'embed-posts-for-gutenberg') }</li>
+				</ul>
+
+				<div className="epfg_post__desc">
+					<p>{ __('Lorem ipsum dolor sit amet, consectetuer adipiscing elit...', 'embed-posts-for-gutenberg') }</p>
+				</div>
+			</div>
+
+			<a href="https://placehold.co/600x600" target="_blank" className="epfg_post__link"></a>
+		</div>
 	);
 }

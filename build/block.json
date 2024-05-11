@@ -4,7 +4,7 @@
   "name": "create-block/embed-posts-for-gutenberg",
   "version": "0.1.0",
   "title": "Embed Posts For Gutenberg",
-  "category": "widgets",
+  "category": "embed",
   "icon": "smiley",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
