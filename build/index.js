@@ -51,7 +51,16 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {Element} Element to render.
  */
-function Edit() {
+function Edit({
+  attributes
+}) {
+  const {
+    post_title,
+    post_date,
+    post_author,
+    post_category,
+    post_description
+  } = attributes;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("figure", {
@@ -63,11 +72,11 @@ function Edit() {
     className: "epfg_post--contents"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
     className: "epfg_post__title"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts', 'embed-posts-for-gutenberg')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
+  }, post_title), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "epfg_post__meta"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Date:', 'embed-posts-for-gutenberg')), " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('10 May, 2024', 'embed-posts-for-gutenberg')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Author:', 'embed-posts-for-gutenberg')), " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('admin', 'embed-posts-for-gutenberg')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Category:', 'embed-posts-for-gutenberg')), " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Uncategorized', 'embed-posts-for-gutenberg'))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Date:', 'embed-posts-for-gutenberg')), " ", post_date), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Author:', 'embed-posts-for-gutenberg')), " ", post_author), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Category:', 'embed-posts-for-gutenberg')), " ", post_category)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "epfg_post__desc"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Lorem ipsum dolor sit amet, consectetuer adipiscing elit...', 'embed-posts-for-gutenberg')))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, post_description))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     href: "https://placehold.co/600x600",
     target: "_blank",
     className: "epfg_post__link"
@@ -163,9 +172,9 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 function save() {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
-  }, 'Embed Posts For Gutenberg – hello from the saved content!');
+  });
 }
 
 /***/ }),
@@ -240,7 +249,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/embed-posts-for-gutenberg","version":"0.1.0","title":"Embed Posts For Gutenberg","category":"embed","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"embed-posts-for-gutenberg","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/embed-posts-for-gutenberg","version":"0.1.0","title":"Embed Posts For Gutenberg","category":"embed","icon":"embed-photo","description":"Embed Posts using WP REST-API from any supported WordPress Sites.","example":{},"supports":{"html":false},"attributes":{"post_title":{"type":"string","default":"Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts [1.0.0011]"},"post_date":{"type":"string","default":"10 May, 2024"},"post_author":{"type":"string","default":"admin"},"post_category":{"type":"string","default":"Uncategorized"},"post_description":{"type":"string","default":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit..."}},"textdomain":"embed-posts-for-gutenberg","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

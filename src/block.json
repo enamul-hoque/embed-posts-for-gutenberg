@@ -5,11 +5,33 @@
 	"version": "0.1.0",
 	"title": "Embed Posts For Gutenberg",
 	"category": "embed",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "embed-photo",
+	"description": "Embed Posts using WP REST-API from any supported WordPress Sites.",
 	"example": {},
 	"supports": {
 		"html": false
+	},
+	"attributes": {
+		"post_title": {
+			"type": "string",
+			"default": "Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts [1.0.0011]"
+		},
+		"post_date": {
+			"type": "string",
+			"default": "10 May, 2024"
+		},
+		"post_author": {
+			"type": "string",
+			"default": "admin"
+		},
+		"post_category": {
+			"type": "string",
+			"default": "Uncategorized"
+		},
+		"post_description": {
+			"type": "string",
+			"default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit..."
+		}
 	},
 	"textdomain": "embed-posts-for-gutenberg",
 	"editorScript": "file:./index.js",

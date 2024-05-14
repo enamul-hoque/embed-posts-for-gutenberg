@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Embed Posts For Gutenberg
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Embed Posts using WP REST-API from any supported WordPress Sites.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0

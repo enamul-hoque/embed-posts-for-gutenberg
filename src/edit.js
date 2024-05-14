@@ -29,7 +29,9 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes }) {
+	const { post_title, post_date, post_author, post_category, post_description } = attributes;
+
 	return (
 		<div { ...useBlockProps() }>
 			<figure className="epfg_post__featured-img">
@@ -37,16 +39,16 @@ export default function Edit() {
 			</figure>
 
 			<div className="epfg_post--contents">
-				<h2 className="epfg_post__title">{ __('Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts', 'embed-posts-for-gutenberg') }</h2>
+				<h2 className="epfg_post__title">{ post_title }</h2>
 
 				<ul className="epfg_post__meta">
-					<li><strong>{ __('Date:', 'embed-posts-for-gutenberg') }</strong> { __('10 May, 2024', 'embed-posts-for-gutenberg') }</li>
-					<li><strong>{ __('Author:', 'embed-posts-for-gutenberg') }</strong> { __('admin', 'embed-posts-for-gutenberg') }</li>
-					<li><strong>{ __('Category:', 'embed-posts-for-gutenberg') }</strong> { __('Uncategorized', 'embed-posts-for-gutenberg') }</li>
+					<li><strong>{ __('Date:', 'embed-posts-for-gutenberg') }</strong> { post_date }</li>
+					<li><strong>{ __('Author:', 'embed-posts-for-gutenberg') }</strong> { post_author }</li>
+					<li><strong>{ __('Category:', 'embed-posts-for-gutenberg') }</strong> { post_category }</li>
 				</ul>
 
 				<div className="epfg_post__desc">
-					<p>{ __('Lorem ipsum dolor sit amet, consectetuer adipiscing elit...', 'embed-posts-for-gutenberg') }</p>
+					<p>{ post_description }</p>
 				</div>
 			</div>
 

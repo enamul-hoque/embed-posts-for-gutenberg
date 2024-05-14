@@ -77,7 +77,11 @@ div.wp-block-create-block-embed-posts-for-gutenberg {
   left: 0;
   right: 0;
   bottom: 0;
+  outline: 0;
   z-index: 1;
+}
+body.block-editor-iframe__body .epfg_post__link {
+  display: none;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
